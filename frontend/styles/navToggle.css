@@ -22,7 +22,7 @@
   position: absolute;
   height: 5px;
   width: 100%;
-  background: #d3531a;
+  background: var(--color-gray-700);
   border-radius: 9px;
   opacity: 1;
   left: 0;
