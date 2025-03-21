@@ -1,0 +1,100 @@
+/* Icon 1 */
+
+#nav-icon1 {
+  width: 40px;
+  height: 25px;
+  position: relative;
+  margin: 0;
+  outline: none;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+#nav-icon1 span {
+  display: block;
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  background: #d3531a;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease;
+  -moz-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 10px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 20px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 10px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 10px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 768px) {
+  body.menuOpened header .menuButtons {
+    transform: translateX(calc(100% - 3.8rem));
+    transition: transform 0.25s ease;
+  }
+  body.menuClosed header .menuButtons {
+    transform: translateX(0);
+    transition: transform 0.25s ease;
+  }
+  body.menuClosed aside.aside {
+    display: block;
+    position: absolute;
+    max-width: 80%;
+    left: -100%;
+    z-index: 1;
+    transition: left 0.25s ease;
+  }
+  body.menuOpened aside.aside {
+    display: block;
+    position: absolute;
+    max-width: 80%;
+    left: 0;
+    transition: left 0.25s ease;
+    z-index: 1;
+  }
+  body aside.aside {
+    height: 100%;
+  }
+}
