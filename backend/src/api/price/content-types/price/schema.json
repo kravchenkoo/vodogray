@@ -1,0 +1,54 @@
+{
+  "kind": "singleType",
+  "collectionName": "prices",
+  "info": {
+    "singularName": "price",
+    "pluralName": "prices",
+    "displayName": "Price",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "priceDiscount": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "priceRegular": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "callButton": {
+      "type": "component",
+      "repeatable": false,
+      "component": "buttons.call-button",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_buttons_call_buttons",
+  "info": {
+    "displayName": "callButton",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "buttonText": {
+      "type": "string"
+    },
+    "phoneNumber": {
+      "type": "string"
+    }
+  }
+}
