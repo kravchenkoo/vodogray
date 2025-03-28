@@ -19,7 +19,7 @@ const nextConfig: NextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'vodogray.media.strapiapp.site',
+        hostname: 'upbeat-novelty-6aa3a72b6e.media.strapiapp.com',
       },
     ],
   },
