@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_buttons_route_buttons",
+  "info": {
+    "displayName": "routeButton"
+  },
+  "options": {},
+  "attributes": {
+    "buttonText": {
+      "type": "string"
+    },
+    "buttonUrl": {
+      "type": "text"
+    }
+  }
+}

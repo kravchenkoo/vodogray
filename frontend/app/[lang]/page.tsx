@@ -19,11 +19,11 @@ export default async function Home({ params }: Props) {
         phone={strapiData.data.callButton.phoneNumber}
       />
       <div
-        className="tableDiscount"
+        className="tableDiscount rounded-md"
         dangerouslySetInnerHTML={{ __html: priceDiscount }}
       ></div>
       <div
-        className="tableRegular"
+        className="tableRegular rounded-md"
         dangerouslySetInnerHTML={{ __html: priceRegular }}
       ></div>
     </div>

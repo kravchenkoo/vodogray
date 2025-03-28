@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_buttons_phone_numbers",
+  "info": {
+    "displayName": "phoneNumber"
+  },
+  "options": {},
+  "attributes": {
+    "phoneNumberText": {
+      "type": "text"
+    },
+    "phoneNumberUrl": {
+      "type": "string"
+    }
+  }
+}

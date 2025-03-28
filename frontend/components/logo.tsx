@@ -1,6 +1,6 @@
 function Logo() {
   return (
-    <div>
+    <div className="max-w-[90%] m-[4rem_auto_0] md:m-[0_auto_0]">
       <svg width="100%" viewBox="0 0 2048 1024">
         <path
           className="fill-transparent"

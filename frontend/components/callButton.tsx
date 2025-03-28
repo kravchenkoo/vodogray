@@ -6,7 +6,7 @@ type Props = {
 export function CallButton({ text, phone }: Props) {
   return (
     <a
-      className="bg-[green] rounded-[3px] flex items-center justify-center p-[1.2rem_2rem]"
+      className="bg-[green] text-white rounded-md flex items-center justify-center p-[1.2rem_2rem]"
       href={`tel:${phone}`}
     >
       <HiOutlinePhone className="w-[22px] h-[22px]" />
