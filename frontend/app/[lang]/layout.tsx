@@ -39,7 +39,7 @@ export async function generateMetadata({
 export default async function RootLayout({ children, params }: Props) {
   const { lang } = await params;
   return (
-    <html lang="en">
+    <html lang={lang}>
       <body className={`${roboto.className} font-medium`}>
         <div className="grid grid-cols-[1fr] md:grid-cols-[26rem_1fr] grid-rows-[auto_1fr] h-dvh overflow-hidden relative">
           <Sidebar lang={lang}></Sidebar>
