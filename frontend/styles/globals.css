@@ -180,6 +180,7 @@
 }
 .tableDiscount table tbody tr:first-child td {
   justify-content: center;
+  height: auto;
 }
 
 .tableRegular {
@@ -239,10 +240,14 @@
 .tableRegular table tbody tr:not(:last-child) {
   border-bottom: 1px solid var(--color-gray-200);
 }
+
 .tableRegular table tbody tr td {
   height: 100%;
   display: flex;
   flex-direction: column;
+}
+.tableRegular table tbody tr:first-child {
+  height: auto;
 }
 .tableRegular table tbody tr:first-child td {
   justify-content: center;
