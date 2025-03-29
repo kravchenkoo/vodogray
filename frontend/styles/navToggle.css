@@ -14,7 +14,7 @@
     height: 5px;
     width: 100%;
     background: var(--color-gray-700);
-    border-radius: 9px;
+    border-radius: 2px;
     opacity: 1;
     left: 0;
   }
@@ -46,7 +46,7 @@
     height: 5px;
     width: 100%;
     background: var(--color-gray-700);
-    border-radius: 9px;
+    border-radius: 2px;
     opacity: 1;
     left: 0;
   }
