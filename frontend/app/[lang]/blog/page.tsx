@@ -33,7 +33,7 @@ export default async function Blog({ params }: Readonly<Props>) {
   );
   const blogPosts = strapiData.data.blogPost;
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col gap-16">
       {blogPosts.map((post: Post) => (
         <BlogPost dict={dict} key={post.id} post={post}></BlogPost>
       ))}

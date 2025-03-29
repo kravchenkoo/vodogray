@@ -26,7 +26,7 @@ function BlogPost({ post, dict }: Post) {
   const beforeImg = post.before;
   const afterImg = post.after;
   return (
-    <div className="bg-gray-0 border rounded-md border-gray-100 border-r-md md:p-[2.4rem_3.2rem_3.2rem] p-[1.4rem_1rem_1.2rem] mb-16 flex flex-col gap-[2.4rem]">
+    <div className="bg-gray-0 border rounded-md border-gray-100 border-r-md md:p-[2.4rem_3.2rem_3.2rem] p-[1.4rem_1rem_1.2rem] flex flex-col gap-[2.4rem]">
       <h2 className="text-4xl">{post.title}</h2>
       <p className="text-gray-700 text-xl">{post.description}</p>
       <div>
