@@ -1,6 +1,15 @@
-function Logo() {
+import Link from 'next/link';
+
+type Props = {
+  lang: string;
+};
+
+function Logo({ lang }: Props) {
   return (
-    <div className="max-w-[90%] m-[4rem_auto_0] md:m-[0_auto_0]">
+    <Link
+      href={`/${lang}/`}
+      className="max-w-[90%] m-[4rem_auto_0] md:m-[0_auto_0]"
+    >
       <svg width="100%" viewBox="0 0 2048 1024">
         <path
           className="fill-transparent"
@@ -300,7 +309,7 @@ function Logo() {
           d="M663.838 740.43L664.794 740.903L663.838 740.43Z"
         />
       </svg>
-    </div>
+    </Link>
   );
 }
 
