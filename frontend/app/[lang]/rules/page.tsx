@@ -6,15 +6,13 @@ type Props = {
 export default async function Blog({ params }: Readonly<Props>) {
   const { lang } = await params;
   const locale = lang === 'en' ? 'en' : 'uk';
-  const strapiData = await getStrapiData(
-    `/api/rule?populate[rules][populate]=*&locale=${locale}`
-  );
-  const { rulesText } = strapiData.data.rules;
-  console.log(strapiData);
+  const strapiData = await getStrapiData(`/api/rule?locale=${locale}`);
+  const { rulestext } = strapiData.data;
+  console.log(rulestext);
   return (
     <div
       className="flex flex-col gap-16 rulesText"
-      dangerouslySetInnerHTML={{ __html: rulesText }}
+      dangerouslySetInnerHTML={{ __html: rulestext }}
     ></div>
   );
 }

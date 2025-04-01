@@ -36,6 +36,9 @@ type Dict = {
   home: {
     navName: string;
   };
+  rules: {
+    navName: string;
+  };
 };
 
 export async function generateMetadata({

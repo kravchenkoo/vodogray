@@ -16,6 +16,9 @@ type Props = {
     home: {
       navName: string;
     };
+    rules: {
+      navName: string;
+    };
   };
 };
 
