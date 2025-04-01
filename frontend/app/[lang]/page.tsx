@@ -12,6 +12,8 @@ export default async function Home({ params }: Props) {
   );
   const { priceDiscount } = strapiData.data;
   const { priceRegular } = strapiData.data;
+  const { rulesforprice } = strapiData.data;
+  console.log(strapiData);
   return (
     <div className="flex flex-col gap-16">
       <CallButton
@@ -25,6 +27,10 @@ export default async function Home({ params }: Props) {
       <div
         className="tableRegular rounded-md"
         dangerouslySetInnerHTML={{ __html: priceRegular }}
+      ></div>
+      <div
+        className="tableRegular rounded-md gap-12 rulesText flex flex-col"
+        dangerouslySetInnerHTML={{ __html: rulesforprice }}
       ></div>
     </div>
   );

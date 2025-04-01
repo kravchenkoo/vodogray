@@ -8,7 +8,6 @@ export default async function Blog({ params }: Readonly<Props>) {
   const locale = lang === 'en' ? 'en' : 'uk';
   const strapiData = await getStrapiData(`/api/rule?locale=${locale}`);
   const { rulestext } = strapiData.data;
-  console.log(rulestext);
   return (
     <div
       className="flex flex-col gap-16 rulesText"

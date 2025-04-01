@@ -11,7 +11,6 @@ export function Map() {
     () => ({ lat: 50.422849791352576, lng: 30.35618054604056 }),
     []
   );
-  console.log(process.env.NEXT_PUBLIC_MAPS_API_KEY);
   if (!isLoaded) return <Spinner />;
   return (
     <GoogleMap
