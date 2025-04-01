@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_rules_rules",
+  "info": {
+    "displayName": "rules"
+  },
+  "options": {},
+  "attributes": {
+    "rulesText": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

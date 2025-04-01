@@ -12,6 +12,9 @@ const dictionaries: Record<
     home: {
       navName: string;
     };
+    rules: {
+      navName: string;
+    };
   }>
 > = {
   en: () => import('./en.json').then((module) => module.default),

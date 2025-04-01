@@ -9,5 +9,8 @@
   },
   "home": {
     "navName": "Home"
+  },
+  "rules": {
+    "navName": "Rules"
   }
 }

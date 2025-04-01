@@ -21,6 +21,9 @@ type Props = {
     home: {
       navName: string;
     };
+    rules: {
+      navName: string;
+    };
   };
 };
 
@@ -58,6 +61,17 @@ function MainNav({ lang, dict }: Props) {
         </li>
         <li>
           <Link
+            href={`/${lang}/rules`}
+            className={`navLink ${
+              lastUrlSegment[0] === 'rules' ? 'active' : ''
+            }`}
+          >
+            <HiOutlinePhone />
+            <span>{dict.rules.navName}</span>
+          </Link>
+        </li>
+        {/* <li>
+          <Link
             href={`/${lang}/blog`}
             className={`navLink ${
               lastUrlSegment[0] === 'blog' ? 'active' : ''
@@ -66,7 +80,7 @@ function MainNav({ lang, dict }: Props) {
             <HiOutlineListBullet />
             <span>{dict.blog.navName}</span>
           </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );
