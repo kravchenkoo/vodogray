@@ -1,6 +1,13 @@
 {
   "blog": {
     "before": "Before:",
-    "after": "After:"
+    "after": "After:",
+    "navName": "Blog"
+  },
+  "contacts": {
+    "navName": "Contacts"
+  },
+  "home": {
+    "navName": "Home"
   }
 }

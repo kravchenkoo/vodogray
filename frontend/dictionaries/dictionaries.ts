@@ -1,6 +1,18 @@
 const dictionaries: Record<
   string,
-  () => Promise<{ blog: { before: string; after: string } }>
+  () => Promise<{
+    blog: {
+      before: string;
+      after: string;
+      navName: string;
+    };
+    contacts: {
+      navName: string;
+    };
+    home: {
+      navName: string;
+    };
+  }>
 > = {
   en: () => import('./en.json').then((module) => module.default),
   ua: () => import('./ua.json').then((module) => module.default),

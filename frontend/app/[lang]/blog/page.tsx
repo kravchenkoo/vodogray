@@ -21,6 +21,13 @@ type Dict = {
   blog: {
     before: string;
     after: string;
+    navName: string;
+  };
+  contacts: {
+    navName: string;
+  };
+  home: {
+    navName: string;
   };
 };
 

@@ -1,6 +1,13 @@
 {
   "blog": {
     "before": "До:",
-    "after": "Після:"
+    "after": "Після:",
+    "navName": "Блог"
+  },
+  "contacts": {
+    "navName": "Контакти"
+  },
+  "home": {
+    "navName": "Головна"
   }
 }

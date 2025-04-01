@@ -8,10 +8,23 @@ import {
 import { usePathname } from 'next/navigation';
 
 type Props = {
-  lang?: string;
+  lang: string;
+  dict: {
+    blog: {
+      before: string;
+      after: string;
+      navName: string;
+    };
+    contacts: {
+      navName: string;
+    };
+    home: {
+      navName: string;
+    };
+  };
 };
 
-function MainNav({ lang }: Props) {
+function MainNav({ lang, dict }: Props) {
   const pathName = usePathname();
   const segments = pathName.split('/');
   const lastUrlSegment = segments.slice(-1);
@@ -29,7 +42,7 @@ function MainNav({ lang }: Props) {
             }`}
           >
             <HiOutlineHome />
-            <span>Home</span>
+            <span>{dict.home.navName}</span>
           </Link>
         </li>
         <li>
@@ -40,7 +53,7 @@ function MainNav({ lang }: Props) {
             }`}
           >
             <HiOutlinePhone />
-            <span>Contacts</span>
+            <span>{dict.contacts.navName}</span>
           </Link>
         </li>
         <li>
@@ -51,7 +64,7 @@ function MainNav({ lang }: Props) {
             }`}
           >
             <HiOutlineListBullet />
-            <span>Blog</span>
+            <span>{dict.blog.navName}</span>
           </Link>
         </li>
       </ul>
