@@ -550,41 +550,6 @@ export interface ApiPricePrice extends Struct.SingleTypeSchema {
   };
 }
 
-export interface ApiRuleRule extends Struct.SingleTypeSchema {
-  collectionName: 'rules';
-  info: {
-    description: '';
-    displayName: 'rule';
-    pluralName: 'rules';
-    singularName: 'rule';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  pluginOptions: {
-    i18n: {
-      localized: true;
-    };
-  };
-  attributes: {
-    createdAt: Schema.Attribute.DateTime;
-    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-    locale: Schema.Attribute.String;
-    localizations: Schema.Attribute.Relation<'oneToMany', 'api::rule.rule'>;
-    publishedAt: Schema.Attribute.DateTime;
-    rules: Schema.Attribute.Component<'rules.rules', false> &
-      Schema.Attribute.SetPluginOptions<{
-        i18n: {
-          localized: true;
-        };
-      }>;
-    updatedAt: Schema.Attribute.DateTime;
-    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
-      Schema.Attribute.Private;
-  };
-}
-
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -1098,7 +1063,6 @@ declare module '@strapi/strapi' {
       'api::contact-page.contact-page': ApiContactPageContactPage;
       'api::home-page.home-page': ApiHomePageHomePage;
       'api::price.price': ApiPricePrice;
-      'api::rule.rule': ApiRuleRule;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;
