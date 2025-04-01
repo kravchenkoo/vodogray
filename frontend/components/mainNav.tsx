@@ -1,9 +1,9 @@
 'use client';
 import Link from 'next/link';
 import {
-  HiOutlineListBullet,
   HiOutlinePhone,
   HiOutlineHome,
+  HiOutlineClipboardDocumentList,
 } from 'react-icons/hi2';
 import { usePathname } from 'next/navigation';
 
@@ -66,7 +66,7 @@ function MainNav({ lang, dict }: Props) {
               lastUrlSegment[0] === 'rules' ? 'active' : ''
             }`}
           >
-            <HiOutlinePhone />
+            <HiOutlineClipboardDocumentList />
             <span>{dict.rules.navName}</span>
           </Link>
         </li>

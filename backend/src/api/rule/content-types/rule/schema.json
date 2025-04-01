@@ -4,7 +4,8 @@
   "info": {
     "singularName": "rule",
     "pluralName": "rules",
-    "displayName": "rule"
+    "displayName": "rule",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -18,7 +19,12 @@
     "rules": {
       "type": "component",
       "repeatable": false,
-      "component": "rules.rules"
+      "component": "rules.rules",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

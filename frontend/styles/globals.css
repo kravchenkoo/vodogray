@@ -252,6 +252,14 @@
 .tableRegular table tbody tr:first-child td {
   justify-content: center;
 }
+.rulesText ul {
+  padding: 0 0 0 3px;
+  list-style: disc;
+  font-size: 1.5rem;
+}
+.rulesText ul li {
+  padding-bottom: 0.8rem;
+}
 .spinner {
   margin: 3.2rem auto 1.6rem;
   width: 60px;

@@ -553,6 +553,7 @@ export interface ApiPricePrice extends Struct.SingleTypeSchema {
 export interface ApiRuleRule extends Struct.SingleTypeSchema {
   collectionName: 'rules';
   info: {
+    description: '';
     displayName: 'rule';
     pluralName: 'rules';
     singularName: 'rule';
@@ -572,7 +573,12 @@ export interface ApiRuleRule extends Struct.SingleTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::rule.rule'>;
     publishedAt: Schema.Attribute.DateTime;
-    rules: Schema.Attribute.Component<'rules.rules', false>;
+    rules: Schema.Attribute.Component<'rules.rules', false> &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
