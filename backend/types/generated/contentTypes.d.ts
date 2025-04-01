@@ -544,6 +544,13 @@ export interface ApiPricePrice extends Struct.SingleTypeSchema {
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
+    rulesforprice: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

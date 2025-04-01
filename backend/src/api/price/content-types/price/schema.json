@@ -49,6 +49,13 @@
           "localized": true
         }
       }
+    },
+    "rulesforprice": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
