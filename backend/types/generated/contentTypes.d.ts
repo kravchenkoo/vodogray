@@ -550,7 +550,12 @@ export interface ApiPricePrice extends Struct.SingleTypeSchema {
         {
           preset: 'defaultHtml';
         }
-      >;
+      > &
+      Schema.Attribute.SetPluginOptions<{
+        i18n: {
+          localized: true;
+        };
+      }>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
