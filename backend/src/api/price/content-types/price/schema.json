@@ -49,18 +49,6 @@
           "localized": true
         }
       }
-    },
-    "rulestextprice": {
-      "type": "customField",
-      "options": {
-        "preset": "defaultHtml"
-      },
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
