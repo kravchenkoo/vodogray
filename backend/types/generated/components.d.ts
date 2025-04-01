@@ -47,22 +47,6 @@ export interface ButtonsRouteButton extends Struct.ComponentSchema {
   };
 }
 
-export interface RulesRules extends Struct.ComponentSchema {
-  collectionName: 'components_rules_rules';
-  info: {
-    displayName: 'rules';
-  };
-  attributes: {
-    rulesText: Schema.Attribute.RichText &
-      Schema.Attribute.CustomField<
-        'plugin::ckeditor5.CKEditor',
-        {
-          preset: 'defaultHtml';
-        }
-      >;
-  };
-}
-
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -70,7 +54,6 @@ declare module '@strapi/strapi' {
       'buttons.call-button': ButtonsCallButton;
       'buttons.phone-number': ButtonsPhoneNumber;
       'buttons.route-button': ButtonsRouteButton;
-      'rules.rules': RulesRules;
     }
   }
 }
