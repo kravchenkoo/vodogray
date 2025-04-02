@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { getStrapiData } from '@/data/getData';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
@@ -14,10 +14,6 @@ const roboto = Roboto({
   fallback: ['system-ui', 'sans-serif'],
   display: 'swap',
 });
-
-type MetadataProps = {
-  params: Promise<{ lang: string }>;
-};
 
 type Props = {
   children: React.ReactNode;
@@ -41,9 +37,7 @@ type Dict = {
   };
 };
 
-export async function generateMetadata({
-  params,
-}: MetadataProps): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
   const locale = lang === 'en' ? 'en' : 'uk';
   const data = await getStrapiData(`/api/home-page?locale=${locale}`);
@@ -57,8 +51,9 @@ export async function generateMetadata({
 export default async function RootLayout({ children, params }: Props) {
   const { lang } = await params;
   const dict: Dict = await getDictionary(lang);
+  const bcp47 = lang === 'en' ? 'en-GB' : 'uk_UA';
   return (
-    <html lang={lang}>
+    <html lang={bcp47}>
       <GoogleAnalytics gaId="G-00YLQEXTPH" />
       <GoogleTagManager gtmId="GTM-KQKSCPPZ" />
       <body className={`${roboto.className} font-medium`}>

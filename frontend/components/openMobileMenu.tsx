@@ -9,6 +9,7 @@ function OpenMobileMenu() {
 
   return (
     <button
+      aria-label="open-mobile-menu"
       id="nav-hamburger-open"
       onClick={() => openMobileMenu()}
       className={`md:hidden`}

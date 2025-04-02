@@ -7,6 +7,7 @@ type Props = {
 function Logo({ lang }: Props) {
   return (
     <Link
+      aria-label="Home"
       href={`/${lang}/`}
       className="max-w-[90%] m-[4rem_auto_0] md:m-[0_auto_0]"
     >
