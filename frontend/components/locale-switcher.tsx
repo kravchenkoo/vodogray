@@ -20,7 +20,7 @@ export default function LocaleSwitcher({ lang }: Props) {
     }
   };
   return (
-    <Link href={redirectedPathname()} className="ml-[auto]">
+    <Link href={redirectedPathname()}>
       {lang === 'ua' ? (
         <span className=" flex items-center">
           <svg

@@ -21,6 +21,7 @@ export default async function Contacts({ params }: Readonly<Props>) {
         text={phoneNumber.phoneNumberText}
         phone={phoneNumber.phoneNumberUrl}
       />
+      <p>{strapiData.data.address}</p>
       <Map />
       <RouteButton text={routeButton.buttonText} url={routeButton.buttonUrl} />
     </div>
