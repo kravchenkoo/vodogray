@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { getStrapiData } from '@/data/getData';
-import { GoogleAnalytics } from '@next/third-parties/google';
+import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import '@/styles/globals.css';
 import Sidebar from '@/components/sidebar';
 import Header from '@/components/header';
@@ -59,6 +59,8 @@ export default async function RootLayout({ children, params }: Props) {
   const dict: Dict = await getDictionary(lang);
   return (
     <html lang={lang}>
+      <GoogleAnalytics gaId="G-00YLQEXTPH" />
+      <GoogleTagManager gtmId="GTM-KQKSCPPZ" />
       <body className={`${roboto.className} font-medium`}>
         <div className="grid grid-cols-[1fr] md:grid-cols-[26rem_1fr] grid-rows-[auto_1fr] h-dvh overflow-hidden relative">
           <Sidebar lang={lang} dict={dict}></Sidebar>
@@ -71,7 +73,6 @@ export default async function RootLayout({ children, params }: Props) {
           <ClickOutside />
         </div>
       </body>
-      <GoogleAnalytics gaId="G-00YLQEXTPH" />
     </html>
   );
 }
