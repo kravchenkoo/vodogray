@@ -1,4 +1,4 @@
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
 import { getStrapiData } from '@/data/getData';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
