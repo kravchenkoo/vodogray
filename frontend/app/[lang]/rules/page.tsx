@@ -10,7 +10,7 @@ export default async function Blog({ params }: Readonly<Props>) {
   const { rulestext } = strapiData.data;
   return (
     <div
-      className="flex flex-col gap-16 rulesText"
+      className="flex flex-col gap-16 rulesText pl-[1rem] md:pl-0"
       dangerouslySetInnerHTML={{ __html: rulestext }}
     ></div>
   );
