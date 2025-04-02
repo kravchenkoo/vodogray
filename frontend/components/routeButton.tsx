@@ -6,7 +6,7 @@ type Props = {
 export function RouteButton({ text, url }: Props) {
   return (
     <a
-      className="mt-12 bg-brand-600 text-white rounded-[3px] flex items-center justify-center p-[1.2rem_2rem]"
+      className="mt-12 route-button bg-brand-600 text-white rounded-[3px] flex items-center justify-center p-[1.2rem_2rem]"
       href={`${url}`}
       target="blank"
     >
