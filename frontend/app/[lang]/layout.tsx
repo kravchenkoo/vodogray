@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import { Roboto } from 'next/font/google';
-import { getStrapiData } from '@/data/getData';
 import { GoogleAnalytics, GoogleTagManager } from '@next/third-parties/google';
 import '@/styles/globals.css';
 import Sidebar from '@/components/sidebar';
@@ -39,12 +38,15 @@ type Dict = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { lang } = await params;
-  const locale = lang === 'en' ? 'en' : 'uk';
-  const data = await getStrapiData(`/api/home-page?locale=${locale}`);
-  const metadata = data.data;
   return {
-    title: metadata?.title,
-    description: metadata?.description,
+    title:
+      lang === 'en'
+        ? 'Premium Car Wash in Sofiivska Borshchahivka | Pushkina 1'
+        : 'Автомийка в Софіївській Борщагівці | вул. Пушкіна, 1',
+    description:
+      lang === 'en'
+        ? 'Keep your car spotless at our top-rated car wash in Sofiivska Borshchahivka! Located on Pushkina 1 (Mykola Vingranovsky 1), we offer professional cleaning, waxing, and detailing services. Visit us today!'
+        : 'Професійна автомийка в Софіївській Борщагівці! Якісне миття, віск і детейлінг на вул. Пушкіна 1 (Миколи Вінграновського, 1). Зробіть своє авто ідеально чистим – завітайте до нас!',
   };
 }
 
