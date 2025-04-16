@@ -1,0 +1,25 @@
+{
+  "blog": {
+    "before": "До:",
+    "after": "Після:",
+    "navName": "Блог"
+  },
+  "contacts": {
+    "navName": "Контакти",
+    "schedule": {
+      "monday": "Понеділок",
+      "tuesday": "Вівторок",
+      "wednesday": "Середа",
+      "thursday": "Четвер",
+      "friday": "П’ятниця",
+      "saturday": "Субота",
+      "sunday": "Неділя"
+    }
+  },
+  "home": {
+    "navName": "Головна"
+  },
+  "rules": {
+    "navName": "Правила"
+  }
+}

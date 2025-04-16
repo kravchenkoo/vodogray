@@ -1,0 +1,25 @@
+{
+  "blog": {
+    "before": "Before:",
+    "after": "After:",
+    "navName": "Blog"
+  },
+  "contacts": {
+    "navName": "Contacts",
+    "schedule": {
+      "monday": "Monday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday",
+      "thursday": "Thursday",
+      "friday": "Friday",
+      "saturday": "Saturday",
+      "sunday": "Sunday"
+    }
+  },
+  "home": {
+    "navName": "Home"
+  },
+  "rules": {
+    "navName": "Rules"
+  }
+}
