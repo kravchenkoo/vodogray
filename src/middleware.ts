@@ -10,7 +10,6 @@ export function middleware(request: NextRequest) {
     pathname.startsWith('/favicon.ico') ||
     pathname.startsWith('/next.svg') || // Add any other static files that need to be excluded
     pathname.startsWith('/admin') ||
-    pathname.startsWith('/_next') ||
     pathname.includes('/api') ||
     pathname.includes('.svg') ||
     pathname.includes('.png') ||
