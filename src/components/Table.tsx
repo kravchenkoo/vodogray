@@ -7,8 +7,8 @@ function Table({ type, table }: { type: string; table: TableBlock }) {
   return table.table.root.children.map((item: any) => {
     if (item.type !== 'table') return null
     return (
-      <div className={`${type} rounded-md`}>
-        <figure key={type}>
+      <div className={`${type} rounded-md`} key={type}>
+        <figure>
           <table>
             {table.tableHeader && (
               <thead>
